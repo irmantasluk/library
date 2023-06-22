@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Book Library</h1>
+    </header>
+    <main>
+        <button type="button" id="addBookBtn" class="btn-secondary">Add Book</button>
+        <div class="container"></div>
+
+        <div class="modal-overlay">
+            <div id="addBookMdl" class="modal">
+                <h3>Add New Book</h3>
+                <form name="addBookForm" id="addBookForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" name="title" id="title" placeholder="Title" required>
+                        <span class="validation-msg"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="author" id="author" placeholder="Author" required>
+                        <span class="validation-msg"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="pages" id="pages" placeholder="Number of Pages" required>
+                        <span class="validation-msg"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="isReadChk">Have you read it?
+                            <input type="checkbox" id="isReadChk" name="isReadChk">
+                        </label>
+                    </div>
+                    <button type="submit" id="submitBookBtn" class="btn-primary">Submit</button>
+                    <button type="button" id="cancel" class="btn-red">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="scripts.js"></script>
+</html>

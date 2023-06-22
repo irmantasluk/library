@@ -1,0 +1,192 @@
+/* SCSS HEX */
+$hunter-green: #386641ff;
+$asparagus: #6a994eff;
+$yellow-green: #a7c957ff;
+$parchment: #f2e8cfff;
+$bittersweet-shimmer: #bc4749ff;
+
+/* SCSS HSL */
+$hunter-green: hsla(132, 29%, 31%, 1);
+$asparagus: hsla(98, 32%, 45%, 1);
+$yellow-green: hsla(78, 51%, 56%, 1);
+$parchment: hsla(43, 57%, 88%, 1);
+$bittersweet-shimmer: hsla(359, 47%, 51%, 1);
+
+/* SCSS RGB */
+$hunter-green: rgba(56, 102, 65, 1);
+$asparagus: rgba(106, 153, 78, 1);
+$yellow-green: rgba(167, 201, 87, 1);
+$parchment: rgba(242, 232, 207, 1);
+$bittersweet-shimmer: rgba(188, 71, 73, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-right: linear-gradient(90deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-bottom: linear-gradient(180deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-left: linear-gradient(270deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-top-right: linear-gradient(45deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-bottom-right: linear-gradient(135deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-top-left: linear-gradient(225deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-bottom-left: linear-gradient(315deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-radial: radial-gradient(#386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+
+h1, h2, h3 {
+    font-family: 'Paytone One', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $parchment;
+}
+
+h3 {
+    color: $hunter-green;
+    font-size: 1.5rem;
+}
+
+header {
+    text-align: center;
+    background-color: $hunter-green;
+    padding: 1px;
+}
+
+body {
+    background: rgba(56, 102, 65, 0.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 100vw;
+    color: $hunter-green;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 20px;
+    gap: 20px 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid $hunter-green;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+}
+
+button {
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 6px;
+    margin-right: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $hunter-green;
+    border: 2px solid $hunter-green;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: $hunter-green;
+    border: 2px solid $hunter-green;
+    transition: all 0.3s;
+}
+
+.btn-secondary {
+    border: 2px solid $hunter-green;
+    background-color: #ffffff;
+    color: $hunter-green;
+}
+
+.btn-secondary:hover {
+    background-color: $hunter-green;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.btn-red {
+    background-color: $bittersweet-shimmer;
+    border: 2px solid $bittersweet-shimmer;
+}
+
+.btn-red:hover {
+    background-color: transparent;
+    color: $bittersweet-shimmer;
+    border: 2px solid $bittersweet-shimmer;
+    transition: all 0.3s;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    border: 1px solid $hunter-green;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 400px;
+    min-height: 300px;
+    background: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $hunter-green;
+    line-height: 20px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus-visible:not([type='checkbox']) {
+    outline: none;
+}
+
+.form-group input[type="checkbox"] {
+    width: unset;
+    border: 2px solid $hunter-green;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.validation-msg {
+    color: $bittersweet-shimmer;
+    position: relative;
+    bottom: 25px;
+    left: 5px;
+}
+
+.form-group .invalid {
+    border-color: $bittersweet-shimmer;
+}
+
+.form-group input.invalid::placeholder {
+    color: $bittersweet-shimmer;
+    opacity: 1;
+}
